@@ -39,6 +39,24 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      message: {
+        to: 'cdrikdodde@yahoo.com',
+      },
+      smtp: {
+        host: 'smtp.mail.yahoo.com',
+        port: 465,
+        secure: true,
+        auth: {
+          user: 'cdrikdodde@yahoo.com',
+          pass: 'Amaterazu3'
+        },
+        tls: {
+          rejectUnauthorized: false
+        }
+      },
+    }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

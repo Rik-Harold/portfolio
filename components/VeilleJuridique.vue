@@ -7,17 +7,17 @@
                 <div class="skills-content">
                     <div class="column left">
                         <div class="text">Qu'est-ce que la veille juridique ?</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae 
-                            consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae 
-                            laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem 
-                            illum. Ad delectus natus aut hic explicabo minus quod.</p>
+                        <p>La veille juridique correspond à une veille habituelle, mais cette fois-ci s’appliquant au domaine du droit. 
+                            La tâche consiste à consulter l’actualité du droit à une fréquence régulière. La veille juridique permet 
+                            de se tenir informé des projets de loi, pour anticiper les évolutions législatives et réglementaires à 
+                            venir. </p>
                     </div>
                     <div class="column right2">
                         <div class="text">Quels sont mes outils de veille juridique ?</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae 
-                            consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae 
-                            laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem 
-                            illum. Ad delectus natus aut hic explicabo minus quod.</p>
+                        <p>Afin de me tenir au courant de l'actualité dans le domaine du droit, ma veille s'effectue avec des outils 
+                            tels que Feedly, disponible sur mobile sur Play Store, et Google Alerte, qui peut facilement être intégré 
+                            au navigateur.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -30,10 +30,11 @@
                 <div class="skills-content">
                     <div class="column left">
                         <div class="text">Pourquoi ce thème ?</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, 
-                            iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, 
-                            harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus 
-                            natus aut hic explicabo minus quod.</p>
+                        <p>Afin d'orienter ma veille juridique, j'ai opté pour le thème de la <i>CNIL</i>. Ce thème de veille juridique 
+                            a attiré mon attention car son rôle est déterminant dans la gestion des données personnelles qui s'avère ainsi 
+                            être un élément important du domaine de l'informatique et surtout du développement. Mon secteur d'activité est 
+                            donc très lié à ce thème, ce qui renforce mon choix.
+                        </p>
                     </div>
                     <div class="column right2">
                         <div class="text">Qu'est-ce que la CNIL ?</div>
@@ -54,13 +55,15 @@
                 <div class="skills-content">
                     <div class="column left">
                         <div class="text">Actualité 1</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.</p>
-                        <a href="#">Lire plus</a>
+                        <p>Loi du 3 mars 2022 pour la mise en place d'une certification de cybersécurité des plateformes numériques destinée au grand public.</p>
+                        <p>La loi crée un "cyberscore" afin que les internautes puissent connaître la sécurisation de leurs données...</p>
+                        <a href="https://www.vie-publique.fr/loi/282626-loi-cyberscore-securite-des-plateformes-numeriques" target="_blank">Lire plus</a>
                     </div>
                     <div class="column right2">
                         <div class="text">Actualité 2</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.</p>
-                        <a href="#">Lire plus</a>
+                        <p>La CNIL publie un guide du RGPB pour les développeurs</p>
+                        <p>Afin d’accompagner les acteurs du développement web ou applicatif dans la mise en conformité de leurs travaux, la CNIL a élaboré un nouveau guide de bonnes pratiques sous licence libre, qui a vocation à être enrichi par les professionnels...</p>
+                        <a href="https://www.cnil.fr/fr/la-cnil-publie-un-guide-rgpd-pour-les-developpeurs" target="_blank">Lire plus</a>
                     </div>
                 </div>
             </div>

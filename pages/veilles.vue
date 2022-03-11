@@ -1,5 +1,8 @@
 <template>
     <div>
+        <!-- Nav barre -->
+        <Header />
+
         <!-- home section start -->
         <section class="home" id="home">
             <div class="max-width">
@@ -13,11 +16,11 @@
             <!-- Slide de veilles -->
             <div class="max-width">
                 <div class="slide">
-                    <div class="juridique veilleHover" @click="slideComponentJuri">
+                    <div class="juridique veilleHover" @click="slideComponentJuri" :class="{ veilleActive: actif1 }">
                         <div class="text-2">Veille</div>
                         <div class="text-2">juridique</div>
                     </div>
-                    <div class="technologique veilleHover" @click="slideComponentTechno">
+                    <div class="technologique veilleHover" @click="slideComponentTechno" :class="{ veilleActive: actif2 }">
                         <div class="text-2">Veilles</div>
                         <div class="text-2">technologiques</div>
                     </div>
@@ -26,54 +29,63 @@
         </div>
 
         <!-- Contenu des veilles -->
-        <component :is='nameComposant'></component>
+        <transition name="fade">
+            <component :is='nameComposant'></component>
+        </transition>
     </div>
 </template>
 
 <script>
-    // Importation des composants
-    import VeilleJuridique from '@/components/VeilleJuridique.vue'
-    import VeillesTechnologiques from '@/components/VeillesTechnologiques.vue'
+// Importation des composants
+import Header from '../components/Header.vue'
+import VeilleJuridique from '@/components/VeilleJuridique.vue'
+import VeillesTechnologiques from '@/components/VeillesTechnologiques.vue'
 
-    // Traitements
-    export default {
-        // layout: 'navBarre',
-        components: {
-            VeilleJuridique,
-            VeillesTechnologiques
+// Traitements
+export default {
+    // layout: 'model',
+    components: {
+        Header,
+        VeilleJuridique,
+        VeillesTechnologiques
+    },
+    data() {
+        return {
+            nameComposant: 'VeilleJuridique',
+            veilleActive: 'veilleActive',
+            veilleDesactive: 'veilleDesactive',
+            actif1: true,
+            actif2: false
+        }
+    },
+    methods: {
+        // Affichage du composant de veille juridique et style du bouton
+        slideComponentJuri () {
+            this.nameComposant = 'VeilleJuridique'
+            this.actif1 = true
+            this.actif2 = false
         },
-        data() {
-            return {
-                nameComposant: 'VeilleJuridique',
-                // veilleActive: {
-                //     backgroundColor: 'rgb(220, 20, 60)',
-                //     color: '#fff'
-                // },
-                // veilleDesactive: {
-                //     backgroundColor: '#fff',
-                //     color: 'rgb(220, 20, 60)'
-                // },
-                veilleActive: 'veilleActive',
-                veilleDesactive: 'veilleDesactive',
-                actif1: true,
-                actif2: false
-            }
-        },
-        methods: {
-            slideComponentJuri () {
-                 this.nameComposant = 'VeilleJuridique'
-                this.actif1 = true
-                this.actif2 = false
-            },
-            slideComponentTechno () {
-                 this.nameComposant = 'VeillesTechnologiques'
-                this.actif1 = false
-                this.actif2 = true
-            }
+        // Affichage du composant de veilles technologiques et style du bouton
+        slideComponentTechno () {
+            this.nameComposant = 'VeillesTechnologiques'
+            this.actif1 = false
+            this.actif2 = true
         }
     }
+}
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.fade-enter{
+  transform: translateY(500px);
+}
+.fade-enter-active {
+  transition: transform 1s cubic-bezier(1.0, 0.5, 0.8, 1.0), color .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.fade-leave-active {
+  transition: opacity .2s;
+}
+.fade-leave-to{
+  opacity: 0;
+}
 </style>

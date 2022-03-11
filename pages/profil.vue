@@ -1,5 +1,8 @@
 <template>
     <article>
+        <!-- Nav barre -->
+        <Header />
+        
         <!-- home section start -->
         <section class="home" id="home">
             <div class="max-width">
@@ -15,7 +18,7 @@
                 <h2 class="title">A propos de moi</h2>
                 <div class="about-content">
                     <div class="column left">
-                        <img src="#" alt="moi">
+                        <img src="~/assets/images/profil.webp" alt="moi">
                     </div>
                     <div class="column right">
                         <div class="text">Je suis Cédrik DODDE</div>
@@ -31,7 +34,7 @@
         <!-- services section start -->
         <section class="services" id="services">
             <div class="max-width">
-                <h2 class="title">Mes formations</h2>
+                <h2 class="title" id="formations" >Mes formations</h2>
                 <div class="serv-content">
                     <div class="card">
                         <div class="box">
@@ -55,14 +58,13 @@
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
         </section>
 
         <!-- skills section start -->
         <section class="skills" id="skills">
             <div class="max-width">
-                <h2 class="title">Mes compétences</h2>
+                <h2 class="title" id="competences" >Mes compétences</h2>
                 <div class="skills-content">
                     <div class="column left">
                         <div class="text">Mes compétences et expériences</div>
@@ -132,43 +134,14 @@
         </section>
 
         <!-- teams section start -->
-        <section class="teams" id="teams">
+        <section class="services">
             <div class="max-width">
-                <h2 class="title">Mes projets personnels</h2>
-                <div class="carousel owl-carousel">
-                    <div class="card">
+                <h2 class="title" id="projets" >Mes projets personnels</h2>
+                <div class="serv-content">
+                    <div v-for="(projet, index) in projets" :key="index" class="card">
                         <div class="box">
-                            <img src="#" alt="">
-                            <div class="text">Application web de messagerie</div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="#" alt="">
-                            <div class="text">Site web de gestion d'école</div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="#" alt="">
-                            <div class="text">Site web de garages de voitures</div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="#" alt="">
-                            <div class="text">Someone name</div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="#" alt="">
-                            <div class="text">Someone name</div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="text">{{ projet.name }}</div>
+                            <p>Ceci est un projet</p>
                         </div>
                     </div>
                 </div>
@@ -178,11 +151,11 @@
         <!-- contact section start -->
         <section class="contact" id="contact">
             <div class="max-width">
-                <h2 class="title">Contactez-moi</h2>
+                <h2 class="title" id="contactez-moi">Contactez-moi</h2>
                 <div class="contact-content">
                     <div class="column left">
-                        <div class="text">Get in Touch</div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                        <div class="text">Réseaux sociaux</div>
+                        <p>Je suis également actif sur les réseaux sociaux comme <a href="https://github.com/Rik-Harold" target="_blank" rel="noopener noreferrer">github</a> et <a href="www.linkedin.com/in/cédrik-dodde-b0178a19a" target="_blank" rel="noopener noreferrer">linkeldin</a>.</p>
                         <div class="icons">
                             <div class="row">
                                 <i class="fas fa-user"></i>
@@ -212,20 +185,20 @@
                         <form action="#">
                             <div class="fields">
                                 <div class="field name">
-                                    <input type="text" placeholder="Nom et Prénom" required>
+                                    <input type="text" v-model="identite" placeholder="Nom et Prénom" required>
                                 </div>
                                 <div class="field email">
-                                    <input type="email" placeholder="Email" required>
+                                    <input type="email" v-model="expediteur" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="field">
-                                <input type="text" placeholder="Sujet" required>
+                                <input type="text" v-model="sujet" placeholder="Sujet" required>
                             </div>
                             <div class="field textarea">
-                                <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                                <textarea cols="30" rows="10" v-model="message" placeholder="Message.." required></textarea>
                             </div>
                             <div class="button-area">
-                                <button type="submit">Envoyer</button>
+                                <button>Envoyer</button>
                             </div>
                         </form>
                     </div>
@@ -236,11 +209,55 @@
 </template>
 
 <script>
-    export default {
-        // layout: 'navBarre'
+import Header from '../components/Header.vue'
+
+export default {
+    layout: 'model',
+    components: {
+        Header
+    },
+    data() {
+        return {
+            identite: '',
+            expediteur: '',
+            sujet: '',
+            message: '',
+            projets: [
+                {
+                    name: 'Premier projet',
+                    image: '~/assets/images/projet-bot-whatsapp.png'
+                },
+                {
+                    name: 'Second projet',
+                    image: '~/assets/images/projet-bot-whatsapp.png'
+                },
+                {
+                    name: 'Dernier projet',
+                    image: '~/assets/images/projet-bot-whatsapp.png'
+                }
+            ]
+        }
+    },
+    methods: {
+        send: (instance) => {
+            // Vérification
+            if (instance != null)
+            {
+                window.open('mailto:' + instance.expediteur + '?subject=' + instance.sujet + '&body=' + instance.message + '\n\n' + instance.identite + '')
+                // Envoi du mail
+                // instance.$mail.send({
+                //     from: instance.expediteur,
+                //     subject: instance.sujet,
+                //     text: instance.message + '\n\n' + instance.identite,
+                // })
+                // Notification de réception
+                alert('Votre message a bien été envoyé !')
+            }
+        }
+    },
+    mounted() {
+        // this.send(this)
     }
+
+}
 </script>
-
-<style lang="scss" scoped>
-
-</style>

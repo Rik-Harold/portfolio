@@ -1,31 +1,43 @@
 <template>
   <!-- <Tutorial/> -->
-  <div id="index">
-    <!-- home section start -->
+  <div  id="index">
+    <!-- Nav barre -->
+    <Header />
+
+    <!-- home section start
+    <transition name="entete">
+        
+    </transition> -->
+
     <section class="home" id="home">
         <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Bonjour, je m'appelle</div>
-                <div class="text-2">Cédrik Doddé</div>
-                <div class="text-3">Et je suis un <span class="typing"></span></div>
-                <a href="profil">Voir mon profil</a>
-            </div>
+            <transition name="entete">
+                <div class="home-content">
+                    <div class="text-1">Bonjour, je m'appelle</div>
+                    <div class="text-2">Cédrik Doddé</div>
+                    <div class="text-3">Et je suis <span class="typing">Développeur web et mobile</span></div>
+                    <a href="profil">Voir mon profil</a>
+                </div>
+            </transition>
         </div>
     </section>
 
     <!-- about section start -->
     <section class="about main-top" id="about">
         <div class="max-width">
-            <h2 class="title title-home">BTS SIO</h2>
+            <h2 class="title title-home" id="bts-sio">BTS SIO</h2>
             <div class="about-content">
                 <div class="column left">
                     <img src="~/assets/images/bts.png" alt="bts sio">
                 </div>
                 <div class="column right">
                     <div class="text">Qu'est-ce que le BTS SIO ?</div>
-                    <p>Le Brevet de Technicien Supérieur Services informatique aux Organisations (SIO) est un diplôme reconnu par l’état de
+                    <p>Le Brevet de Technicien Supérieur Services Informatiques aux Organisations (SIO) est un diplôme reconnu par l’état de
                         niveau Bac+2. Il s’adresse à ceux qui souhaitent se former en deux ans aux métiers d’administrateur réseau ou de développeur
                         pour intégrer directement le marché du travail ou continuer des études dans le domaine de l’informatique.</p>
+                    <p id="cybersecurite" >Le nouveau BTS SIO forme à la <b>cybersécurité</b> dès la rentrée 2020 ! Organisé par les professionnels 
+                        du secteur informatique, les changements ne sont pas anodins puisqu’ils sont désormais organisés en bloc de compétences, afin 
+                        de mieux répondre aux besoins des entreprises.</p>
                     <p>Le BTS SIO propose deux (02) spécialités bien distinctes : l'option <b>SISR</b> et l'option <b>SLAM</b>.</p>
                 </div>
             </div>
@@ -84,21 +96,15 @@
 </template>
 
 <script>
+import Header from '../components/Header.vue'
 export default {
-  name: 'IndexPage',
-  transition: 'page'
-//   layout: 'navBarre'
+  layout: 'model',
+  // transition: 'page',
+  components: {
+    Header
+  }
 }
 </script>
 
 <style>
-.slide-bottom-enter-page,
-.slide-bottom-leave-page {
-  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
-}
-.slide-bottom-enter,
-.slide-bottom-leave-to {
-  opacity: 0;
-  transform: translate3d(0, 15px, 0);
-}
 </style>

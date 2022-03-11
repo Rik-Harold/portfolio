@@ -112,14 +112,18 @@ section .titleVeille::after{
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding: 30px 0;
+    padding: 40px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
-.navbarre.sticky{
+.navbarre-sticky{
     padding: 15px 0;
     background: crimson;
 }
+/* .navbarre-sticky:hover {
+    padding: 15px 0;
+    background: crimson;
+} */
 .navbarre .max-width{
     display: flex;
     align-items: center;
@@ -130,16 +134,17 @@ section .titleVeille::after{
     font-size: 35px;
     font-weight: 600;
 }
-.navbarre .logo a span{
+.navbarre .logo span{
     color: crimson;
     transition: all 0.3s ease;
 }
-.navbarre.sticky .logo a span{
+.navbarre-sticky .logo a span{
     color: #fff;
 }
 .navbarre .menu li{
     list-style: none;
     display: inline-block;
+    margin-top: 10px;
 }
 .navbarre .menu li a{
     display: block;
@@ -153,8 +158,8 @@ section .titleVeille::after{
     color: crimson;
     text-decoration: none;
 }
-.navbarre.sticky .menu li a:hover{
-    color: #fff;
+.navbarre-sticky .menu li a:hover{
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
 
@@ -324,6 +329,11 @@ section .titleVeille::after{
     background: #111;
     content: "what i do";
 }
+.services .apprentissage::after
+{
+    background: #111;
+    content: "what i learn";
+}
 /* Style de la barre de recherche */
 .services .searchBar
 {
@@ -358,6 +368,14 @@ section .titleVeille::after{
     transition: all 0.3s ease;
     margin-bottom: 10px;
 }
+.services .serv-content .card-video{
+    width: calc(33% - 20px);
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
 /* Style des cartes de situation professionnelles */
 .services .serv-content .card .viewDoc
 {
@@ -380,11 +398,17 @@ section .titleVeille::after{
 .services .serv-content .card:hover{
     background: crimson;
 }
-.services .serv-content .card .box{
+.services .serv-content .card-video:hover{
+    background-color: none;
+}
+.services .serv-content .card .box, .services .serv-content .card-video .box{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover .box{
     transform: scale(1.05);
+}
+.services .serv-content .card-video:hover .box{
+    transform: scale(1.15);
 }
 .services .serv-content .card i{
     font-size: 50px;
@@ -502,33 +526,34 @@ section .titleVeille::after{
 .teams .title::after{
     content: "what i do";
 }
-.teams .carousel .card{
+.teams .monCarousel .carte{
     background: #222;
     border-radius: 6px;
-    padding: 25px 35px;
+    /* padding: 25px 35px; */
+    padding: 10px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
+.teams .monCarousel .carte:hover{
     background: crimson;
 }
-.teams .carousel .card .box{
+.teams .monCarousel .carte .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.teams .monCarousel .carte:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.teams .monCarousel .carte .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
+.teams .monCarousel .carte img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -536,7 +561,7 @@ section .titleVeille::after{
     border: 5px solid crimson;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.teams .monCarousel .carte:hover img{
     border-color: #fff;
 }
 .owl-dots{
@@ -604,15 +629,13 @@ section .titleVeille::after{
     background-color: crimson;
     color: #fff;
 }
-/* .veilleHover:
-{
-    background-color: crimson;
-} */
 .veilleHover:hover
 {
-    border: solid crimson;
+    border: 0px solid crimson;
     background-color: crimson;
     color: #fff;
+    cursor: pointer;
+    transition: all 1s ease;
 }
 .veilleDesactive
 {
