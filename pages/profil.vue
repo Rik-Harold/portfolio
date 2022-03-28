@@ -25,7 +25,7 @@
                         <p>Etudiant en fin de cursus du BTS SIO, j'ai 21ans et je suis développeur web et mobile. Ma passion pour l'informatique m'a poussé à orienter mes études vers ce secteur et j'ai rapidement pris goût à la programmation. Au cours de mes deux années d'études au <i>CFA ITIS</i>, je me suis formé à l'usage des langages de programation et à de la maitrise de systèmes informatiques.</p>
                         <div class="text">Mes perspectives d'avenir</div>
                         <p>L'expérience du monde du numérique a poussé plus haut ma passion pour cet univers. En ce sens, mon BTS me servira de tremplin à une spécialisation en big data et machin-learning. En effet, la gestion et l'automatisation des données avec l'usage de l'intelligence artificielle sont devenues mes repères. Je pense ainsi intégrer un cycle d'ingénieur pour devenir <strong>Data Engineer</strong>.</p>
-                        <a href="CV_Cédrik_DODDE_Dev.pdf" target="_blank">Télécharger mon CV</a>
+                        <a class="lien" href="CV_Cédrik_DODDE_Dev.pdf" target="_blank">Télécharger mon CV</a>
                     </div>
                 </div>
             </div>
@@ -109,6 +109,13 @@
                         </div>
                         <div class="bars">
                             <div class="info">
+                                <span>Nuxt Js</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="line nuxt-js"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
                                 <span>Node Js</span>
                                 <span>75%</span>
                             </div>
@@ -154,8 +161,9 @@
                 <h2 class="title" id="contactez-moi">Contactez-moi</h2>
                 <div class="contact-content">
                     <div class="column left">
-                        <div class="text">Réseaux sociaux</div>
-                        <p>Je suis également actif sur les réseaux sociaux comme <a href="https://github.com/Rik-Harold" target="_blank" rel="noopener noreferrer">github</a> et <a href="www.linkedin.com/in/cédrik-dodde-b0178a19a" target="_blank" rel="noopener noreferrer">linkeldin</a>.</p>
+                        <div class="text">Réseaux sociaux professionnels</div>
+                        <p>Je suis également actif sur les réseaux sociaux comme <a href="https://github.com/Rik-Harold" target="_blank" rel="noopener noreferrer">GitHub</a> 
+                        et <a href="www.linkedin.com/in/cédrik-dodde-b0178a19a" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
                         <div class="icons">
                             <div class="row">
                                 <i class="fas fa-user"></i>
@@ -210,6 +218,7 @@
 
 <script>
 import Header from '../components/Header.vue'
+// import nodemailer from 'nodemailer'
 
 export default {
     layout: 'model',
@@ -235,29 +244,54 @@ export default {
                     name: 'Dernier projet',
                     image: '~/assets/images/projet-bot-whatsapp.png'
                 }
-            ]
+            ],
+            transporter: null
         }
+    },
+    mounted() {
+        // Initialisation du transporteur de mail
+        // this.transporter = nodemailer.createTransport({
+        //     service: 'yahoo',
+        //     auth: {
+        //         user: 'cdrikdodde@yahoo.com',
+        //         pass: 'Amaterazu3'
+        //     }
+        // })
     },
     methods: {
         send: (instance) => {
             // Vérification
-            if (instance != null)
-            {
-                window.open('mailto:' + instance.expediteur + '?subject=' + instance.sujet + '&body=' + instance.message + '\n\n' + instance.identite + '')
-                // Envoi du mail
-                // instance.$mail.send({
-                //     from: instance.expediteur,
-                //     subject: instance.sujet,
-                //     text: instance.message + '\n\n' + instance.identite,
-                // })
-                // Notification de réception
-                alert('Votre message a bien été envoyé !')
+            // if (instance != null)
+            // {
+            //     window.open('mailto:' + instance.expediteur + '?subject=' + instance.sujet + '&body=' + instance.message + '\n\n' + instance.identite + '')
+            //     // Envoi du mail
+            //     // instance.$mail.send({
+            //     //     from: instance.expediteur,
+            //     //     subject: instance.sujet,
+            //     //     text: instance.message + '\n\n' + instance.identite,
+            //     // })
+            //     // Notification de réception
+            //     alert('Votre message a bien été envoyé !')
+            // }
+            let mailOptions = {
+                from: instance.expediteur,
+                to: 'jharold613@gmail.com',
+                subject: instance.sujet,
+                text: instance.message
             }
+
+            instance.transporter.sendMail(mailOptions, function(error, info){
+                if (error) {
+                    console.log(error)
+                } else {
+                    console.log('Email sent: ' + info.response)
+                }
+            })
         }
-    },
-    mounted() {
-        // this.send(this)
     }
 
 }
 </script>
+
+<style>
+</style>

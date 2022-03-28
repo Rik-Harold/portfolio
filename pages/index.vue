@@ -9,18 +9,20 @@
         
     </transition> -->
 
-    <section class="home" id="home">
-        <div class="max-width">
-            <transition name="entete">
-                <div class="home-content">
-                    <div class="text-1">Bonjour, je m'appelle</div>
-                    <div class="text-2">Cédrik Doddé</div>
-                    <div class="text-3">Et je suis <span class="typing">Développeur web et mobile</span></div>
-                    <a href="profil">Voir mon profil</a>
-                </div>
-            </transition>
-        </div>
-    </section>
+    <transition name="affiche">
+        <section class="home" id="home">
+            <div class="max-width">
+                <transition name="entete">
+                    <div class="home-content">
+                        <div class="text-1">Bonjour, je m'appelle</div>
+                        <div class="text-2">Cédrik Doddé</div>
+                        <div class="text-3">Et je suis <span class="typing">Développeur web et mobile</span></div>
+                        <a class="lien" href="profil">Voir mon profil</a>
+                    </div>
+                </transition>
+            </div>
+        </section>
+    </transition>
 
     <!-- about section start -->
     <section class="about main-top" id="about">
@@ -107,4 +109,16 @@ export default {
 </script>
 
 <style>
+.fade-enter{
+  transform: translateY(500px);
+}
+.fade-enter-active {
+  transition: transform 1s cubic-bezier(1.0, 0.5, 0.8, 1.0), color .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.fade-leave-active {
+  transition: opacity .2s;
+}
+.fade-leave-to{
+  opacity: 0;
+}
 </style>

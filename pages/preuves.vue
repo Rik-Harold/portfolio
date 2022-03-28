@@ -26,7 +26,7 @@
 
                 <!-- Contenu des preuves -->
                 <div class="serv-content">
-                    <div class="card" v-for="(preuve, index) in tri" :key="index" >
+                    <div class="card h-100" v-for="(preuve, index) in tri" :key="index" >
                         <div class="box">
                             <div class="text nameSituation">{{ preuve.name }}</div>
                             <p>{{ preuve.description }}</p>
@@ -69,18 +69,18 @@ export default {
                 {
                     name: 'Valorisation de l\'image de l\'organisation',
                     description: 'Site web de l\'entreprise WEBMANA présentant son identité numérique.',
-                    document: 'presence_en ligne_entreprise.pdf'
+                    document: 'valorisation_image_entreprise.pdf'
                 },
                 {
-                    name: 'Travail en mode projet',
+                    name: 'Gestion des tâches et travail en mode projet',
                     description: 'Utilisation de l\'outil GANTT PROJECT pour la répartition des tâches, le suivi et l\'analyse du projet',
                     document: 'gestion_de_projet.pdf'
-                }/*,
-                {
-                    name: 'Tests d\'intégration',
-                    description: 'Tests pour évaluer la performance des applications développées et leur acceptation.',
-                    document: ''
                 },
+                {
+                    name: 'Tests d\'intégration de services',
+                    description: 'Tests pour évaluer la performance des applications développées et leur acceptation.',
+                    document: 'tests_integration.pdf'
+                },/*
                 {
                     name: 'Déployement de services',
                     description: 'Mise en ligne des services en utilisant des outils comme GIT pour rendre disponible les projets en ligne.',
@@ -93,28 +93,29 @@ export default {
                 },
                 {
                     name: 'Environnement d\'apprentissage personnel',
-                    description: 'Tutos d\'explication de concepts de programmation.',
+                    description: 'Tutos d\'apprentissage de concepts informatiques.',
                     document: ''
-                }*/,
+                }, */
                 {
                     name: 'Outils et stratégies de veille informationnelle',
                     description: 'Maintenir une veille sur les différentes évolution du big data et de la blockchain.',
                     document: 'veille_informationnelle.pdf'
-                }/*,
+                },
                 {
                     name: 'Gestion d\'identitié professionnelle',
                     description: 'Profil professionnel en ligne mettant en avant mon Curriculum Vitae et mes compétences professionnelles.',
-                    document: ''
-                },
+                    document: 'identite_pro.pdf'
+                } /*,
                 {
                     name: 'Développement du projet professionnel',
                     description: 'Perspectives d\'évolution après le BTS notamment dans les formations de Data Scientist',
                     document: ''
-                }*/
+                } */
             ]
         }
     },
     computed: {
+        // Fonction de recherche de preuves techniques
         tri ()
         {
             if (this.saisie === '')
@@ -132,6 +133,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
 </style>

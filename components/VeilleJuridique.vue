@@ -57,13 +57,13 @@
                         <div class="text">Actualité 1</div>
                         <p>Loi du 3 mars 2022 pour la mise en place d'une certification de cybersécurité des plateformes numériques destinée au grand public.</p>
                         <p>La loi crée un "cyberscore" afin que les internautes puissent connaître la sécurisation de leurs données...</p>
-                        <a href="https://www.vie-publique.fr/loi/282626-loi-cyberscore-securite-des-plateformes-numeriques" target="_blank">Lire plus</a>
+                        <a class="lien" href="https://www.vie-publique.fr/loi/282626-loi-cyberscore-securite-des-plateformes-numeriques" target="_blank">Lire plus</a>
                     </div>
                     <div class="column right2">
                         <div class="text">Actualité 2</div>
                         <p>La CNIL publie un guide du RGPB pour les développeurs</p>
                         <p>Afin d’accompagner les acteurs du développement web ou applicatif dans la mise en conformité de leurs travaux, la CNIL a élaboré un nouveau guide de bonnes pratiques sous licence libre, qui a vocation à être enrichi par les professionnels...</p>
-                        <a href="https://www.cnil.fr/fr/la-cnil-publie-un-guide-rgpd-pour-les-developpeurs" target="_blank">Lire plus</a>
+                        <a class="lien" href="https://www.cnil.fr/fr/la-cnil-publie-un-guide-rgpd-pour-les-developpeurs" target="_blank">Lire plus</a>
                     </div>
                 </div>
             </div>

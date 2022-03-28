@@ -59,13 +59,13 @@
                         <div class="text">Actualité 1</div>
                         <p>Big data et analytique : un marché promis à une croissance à deux chiffres</p>
                         <p>Le marché des solutions et services du Big data et de l’analyse de données devrait croître en moyenne de 12,8% par an d’ici 2025...</p>
-                        <a href="https://www.silicon.fr/big-data-analytique-croissance-414574.html" target="_blank">Lire plus</a>
+                        <a class="lien" href="https://www.silicon.fr/big-data-analytique-croissance-414574.html" target="_blank">Lire plus</a>
                     </div>
                     <div class="column right2">
                         <div class="text">Actualité 2</div>
                         <p>Un hackathon orienté blockchain dans la finance</p>
                         <p>Plusieurs établissements financiers ont lancé le CAST Challenge, un hackathon portant sur 5 cas d'usages de la blockchain dans leur secteur...</p>
-                        <a href="https://www.lemondeinformatique.fr/actualites/lire-un-hackathon-oriente-blockchain-dans-la-finance-85949.html" target="_blank">Lire plus</a>
+                        <a class="lien" href="https://www.lemondeinformatique.fr/actualites/lire-un-hackathon-oriente-blockchain-dans-la-finance-85949.html" target="_blank">Lire plus</a>
                     </div>
                 </div>
 

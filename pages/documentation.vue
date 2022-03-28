@@ -8,7 +8,7 @@
             <div class="max-width">
                 <div class="home-content special">
                     <div class="text-2">Documentation</div>
-                    <a href="Tableau de synthèse_2.pdf" target="_blank">Tableau de sythèse</a>
+                    <a class="lien" href="Tableau_de_synthese.pdf" target="_blank">Tableau de sythèse</a>
                 </div>
             </div>
         </section>
@@ -83,6 +83,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
 </style>

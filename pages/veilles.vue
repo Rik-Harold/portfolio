@@ -76,6 +76,18 @@ export default {
 </script>
 
 <style scoped>
+.affiche-enter{
+  transform: translateY(500px);
+}
+.affiche-enter-active {
+  transition: transform 1s cubic-bezier(1.0, 0.5, 0.8, 1.0), color .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.affiche-leave-active {
+  transition: opacity .2s;
+}
+.affiche-leave-to{
+  opacity: 0;
+}
 .fade-enter{
   transform: translateY(500px);
 }
