@@ -67,35 +67,45 @@ export default {
                     document: 'ticketing.pdf'
                 },
                 {
-                    name: 'Valorisation de l\'image de l\'organisation',
-                    description: 'Site web de l\'entreprise WEBMANA présentant son identité numérique.',
-                    document: 'valorisation_image_entreprise.pdf'
+                    name: 'Gestion des tâches AP3',
+                    description: 'Utilisation de l\'outil GANTT PROJECT pour la répartition des tâches, le suivi et l\'analyse du projet de l\'application web.',
+                    document: 'gant_m2l_ap3.pdf'
                 },
                 {
-                    name: 'Gestion des tâches et travail en mode projet',
-                    description: 'Utilisation de l\'outil GANTT PROJECT pour la répartition des tâches, le suivi et l\'analyse du projet',
+                    name: 'Travail en mode projet',
+                    description: 'Utilisation de l\'outil GANTT PROJECT pour la répartition des tâches, le suivi et l\'analyse des projets.',
                     document: 'gestion_de_projet.pdf'
+                },
+                {
+                    name: 'Gestion des tâches AP4',
+                    description: 'Utilisation de l\'outil GANTT PROJECT pour la répartition des tâches, le suivi et l\'analyse du projet de l\'application mobile.',
+                    document: 'gant_m2l_ap4.pdf'
                 },
                 {
                     name: 'Tests d\'intégration de services',
                     description: 'Tests pour évaluer la performance des applications développées et leur acceptation.',
                     document: 'tests_integration.pdf'
-                },/*
+                },
+                {
+                    name: 'Valorisation de l\'image de l\'organisation',
+                    description: 'Site web de l\'entreprise WEBMANA présentant son identité numérique.',
+                    document: 'valorisation_image_entreprise.pdf'
+                },
                 {
                     name: 'Déployement de services',
                     description: 'Mise en ligne des services en utilisant des outils comme GIT pour rendre disponible les projets en ligne.',
-                    document: ''
+                    document: 'deployer_un_service.pdf'
                 },
                 {
                     name: 'Accompagnement des utilisateurs',
                     description: 'Formation des utilisateurs à l\'usage d\'un site suivant les différentes étapes de navigation.',
-                    document: ''
+                    document: '#'
                 },
                 {
                     name: 'Environnement d\'apprentissage personnel',
                     description: 'Tutos d\'apprentissage de concepts informatiques.',
-                    document: ''
-                }, */
+                    document: 'environnement_apprentissage.pdf'
+                },
                 {
                     name: 'Outils et stratégies de veille informationnelle',
                     description: 'Maintenir une veille sur les différentes évolution du big data et de la blockchain.',
@@ -105,12 +115,12 @@ export default {
                     name: 'Gestion d\'identitié professionnelle',
                     description: 'Profil professionnel en ligne mettant en avant mon Curriculum Vitae et mes compétences professionnelles.',
                     document: 'identite_pro.pdf'
-                } /*,
+                },
                 {
                     name: 'Développement du projet professionnel',
                     description: 'Perspectives d\'évolution après le BTS notamment dans les formations de Data Scientist',
-                    document: ''
-                } */
+                    document: 'projet_pro.pdf'
+                }
             ]
         }
     },
