@@ -8,21 +8,18 @@
     <transition name="entete">
         
     </transition> -->
-
-    <transition name="affiche">
-        <section class="home" id="home">
-            <div class="max-width">
-                <transition name="entete">
-                    <div class="home-content">
-                        <div class="text-1">Bonjour, je m'appelle</div>
-                        <div class="text-2">Cédrik Doddé</div>
-                        <div class="text-3">Et je suis <span class="typing">Développeur web et mobile</span></div>
-                        <a class="lien" href="profil">Voir mon profil</a>
-                    </div>
-                </transition>
-            </div>
-        </section>
-    </transition>
+    <section class="home" id="home">
+        <div class="max-width">
+            <transition name="entete">
+                <div class="home-content">
+                    <div class="text-1">Bonjour, je m'appelle</div>
+                    <div class="text-2">Cédrik Doddé</div>
+                    <div class="text-3">Et je suis <span class="typing">Développeur web et mobile</span></div>
+                    <a class="lien" href="profil">Voir mon profil</a>
+                </div>
+            </transition>
+        </div>
+    </section>
 
     <!-- about section start -->
     <section class="about main-top" id="about">
@@ -40,6 +37,8 @@
                     <p id="cybersecurite" >Le nouveau BTS SIO forme à la <b>cybersécurité</b> dès la rentrée 2020 ! Organisé par les professionnels 
                         du secteur informatique, les changements ne sont pas anodins puisqu’ils sont désormais organisés en bloc de compétences, afin 
                         de mieux répondre aux besoins des entreprises.</p>
+                    <p>La cybersécurité est désormais essentielle dans la stratégie d’une entreprise et elle vise tous les secteurs d’activités 
+                        qu’ils soient industriels ou encore financiers.</p>
                     <p>Le BTS SIO propose deux (02) spécialités bien distinctes : l'option <b>SISR</b> et l'option <b>SLAM</b>.</p>
                 </div>
             </div>
@@ -90,20 +89,24 @@
                 </div>
             </div>
         </div>
-        <div class="img-index">
-            <img src="~/assets/images/bts-sio.png" alt="Blocs de compétences BTS SIO">
-        </div>
     </div>
+    
+    <!-- Pied de page -->
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
+
 export default {
   layout: 'model',
   // transition: 'page',
+  name: 'Index',
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>

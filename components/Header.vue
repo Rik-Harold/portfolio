@@ -8,7 +8,7 @@
         <nav class="navbarre" id="fondNavBarre">
             <div class="max-width">
                 <!-- Titre du site -->
-                <div class="logo"><nuxt-link to="index">Portfo<span id="partie" >lio.</span></nuxt-link></div>
+                <div class="logo"><nuxt-link to="/">Portfo<span id="partie" >lio.</span></nuxt-link></div>
                 <!-- Liens de navigation -->
                 <ul :class="{ 'active': clique }" class="menu">
                     <li><nuxt-link to="/" class="menu-btn">Accueil</nuxt-link></li>

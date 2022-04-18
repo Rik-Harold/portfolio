@@ -32,12 +32,16 @@
         <transition name="fade">
             <component :is='nameComposant'></component>
         </transition>
+        
+        <!-- Pied de page -->
+        <Footer />
     </div>
 </template>
 
 <script>
 // Importation des composants
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 import VeilleJuridique from '@/components/VeilleJuridique.vue'
 import VeillesTechnologiques from '@/components/VeillesTechnologiques.vue'
 
@@ -47,7 +51,8 @@ export default {
     components: {
         Header,
         VeilleJuridique,
-        VeillesTechnologiques
+        VeillesTechnologiques,
+        Footer
     },
     data() {
         return {

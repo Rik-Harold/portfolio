@@ -83,7 +83,7 @@ section .title::after{
 section .titleVeille{
     position: relative;
     text-align: center;
-    font-size: 40px;
+    font-size: min(40px, 10vw);
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
@@ -108,6 +108,10 @@ section .titleVeille::after{
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
+}
+#formations, #competences, #projets, #moi, #contactez-moi
+{
+    font-size: min(10vw, 50px);
 }
 
 /* navbarre styling */
@@ -268,8 +272,12 @@ section .titleVeille::after{
     width: 45%;
 }
 .about .about-content .left img{
-    height: 400px;
-    width: 400px;
+    /* height: 400px;
+    width: 400px; */
+    max-height: 400px;
+    max-width: 400px;
+    min-height: 100px;
+    min-width: 100px;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -307,10 +315,12 @@ section .titleVeille::after{
 /* Image des sections du bts */
 .img-index
 {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: center; */
+    /* padding: 20px; */
+    min-width: 100%;
+    margin: 0 auto;
 }
 
 /* services section styling */
@@ -340,7 +350,7 @@ section .titleVeille::after{
 /* Style de la barre de recherche */
 .services .searchBar
 {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 .services .searchBar .search
 {
@@ -352,8 +362,9 @@ section .titleVeille::after{
 {
     border-radius: 10px;
     width: 500px;
-    font-size: large;
-    padding: 20px;
+    min-width: 100px;
+    font-size: medium;
+    padding: 15px;
     text-align: center;
 }
 .services .searchBar .search .saisie:focus
@@ -599,7 +610,7 @@ a {
 /* Veille composant */
 .slideVeille
 {
-    padding: 50px 0px;
+    margin: 50px 0px;
 }
 .slideVeille .slide
 {
@@ -607,12 +618,13 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
 }
 .slideVeille .slide .juridique, .slideVeille .slide .technologique
 {
-    padding: 15px;
+    padding: 10px;
     border-radius: 20%;
-    font-size: 30px;
+    font-size: 3vw;
     font-weight: 900;
     text-transform: capitalize;
     letter-spacing: 3px;
@@ -772,11 +784,6 @@ footer span a:hover{
     }
 }
 
-@media (max-width: 991px) {
-    .max-width{
-        padding: 0 50px;
-    }
-}
 @media (max-width: 1075px){
     .menu-btn{
         display: block;
@@ -835,12 +842,23 @@ footer span a:hover{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .services .serv-content .card-video{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
     .skills .skills-content .column,
     .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
     }
 }
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+
 
 @media (max-width: 690px) {
     .max-width{
@@ -858,11 +876,22 @@ footer span a:hover{
     .services .serv-content .card{
         width: 100%;
     }
+    .services .serv-content .card-video{
+        width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
+    .home, .about, .services, .contact, .skills, #moi, #contactez-moi {
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+    }
+    .home .title::after, .about .title-home::after, .about .title::after, .services .title::after, .skills .title::after{
+        content: ".";
+    }
     .home .home-content .text-2{
-        font-size: 50px;
+        font-size: 10vw;
     }
     .home .home-content .text-3{
         font-size: 27px;

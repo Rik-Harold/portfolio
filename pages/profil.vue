@@ -15,7 +15,7 @@
         <!-- about section start -->
         <section class="about" id="about">
             <div class="max-width">
-                <h2 class="title">A propos de moi</h2>
+                <h2 class="title" id="moi">A propos de moi</h2>
                 <div class="about-content">
                     <div class="column left">
                         <img src="~/assets/images/profil.webp" alt="moi">
@@ -213,17 +213,23 @@
                 </div>
             </div>
         </section>
+        <!-- <img src="~/assets/images/bts-sio.png" alt="Blocs de compétences BTS SIO"> -->
+        
+        <!-- Pied de page -->
+        <Footer />
     </article>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 // import nodemailer from 'nodemailer'
 
 export default {
     layout: 'model',
     components: {
-        Header
+        Header,
+        Footer
     },
     data() {
         return {
