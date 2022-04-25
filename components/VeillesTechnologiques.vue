@@ -44,6 +44,9 @@
                              être inviolable.</p>
                     </div>
                 </div>
+                <div class="details">
+                    <a class="viewDetails" href="#" target="_blank">Découvrir le big data</a>
+                </div>
             </div>
         </section>
 
@@ -69,10 +72,10 @@
                     </div>
                 </div>
 
-                <!-- Petit espacement de 30 pixels --
+                <!-- Petit espacement de 30 pixels -->
                 <div class="espaceDark"></div>
                 
-                <-- ACTUALITE SUR LA BLOCKCHAIN --
+                <!-- ACTUALITE SUR LA BLOCKCHAIN -->
                 <div class="skills-content">
                     <div class="column left">
                         <div class="text">Actualité 3</div>
@@ -84,7 +87,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.</p>
                         <a href="#">Lire plus</a>
                     </div>
-                </div> -->
+                </div>
             </div>
         </section>
     </div>
@@ -96,6 +99,10 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.details
+{
+    display: flex;
+    justify-content: center;
+}
 </style>

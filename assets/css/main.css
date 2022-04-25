@@ -408,7 +408,20 @@ a {
     transition: all 0.3s ease;
     text-decoration: none;
 }
-.services .serv-content .card .viewDoc:hover
+.viewDetails
+{
+    display: block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card .viewDoc:hover, .viewDetails:hover
 {
     color: crimson;
     background: #fff;
@@ -773,6 +786,20 @@ footer span a{
 }
 footer span a:hover{
     text-decoration: underline;
+}
+
+.affiche-enter{
+    transform: translateY(-500px);
+}
+.affiche-enter-active {
+    transition: transform 1.5s;
+}
+
+.affiche-leave-active {
+transition: all .5s;
+}
+.affiche-leave-to{
+opacity: 0;
 }
 
 

@@ -112,7 +112,7 @@ export default {
 </script>
 
 <style>
-.fade-enter{
+/* .fade-enter{
   transform: translateY(500px);
 }
 .fade-enter-active {
@@ -123,5 +123,5 @@ export default {
 }
 .fade-leave-to{
   opacity: 0;
-}
+} */
 </style>

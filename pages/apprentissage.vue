@@ -157,7 +157,7 @@ export default {
 </script>
 
 <style scoped>
-.affiche-enter{
+/* .affiche-enter{
   transform: translateY(500px);
 }
 .affiche-enter-active {
@@ -168,5 +168,5 @@ export default {
 }
 .affiche-leave-to{
   opacity: 0;
-}
+} */
 </style>

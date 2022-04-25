@@ -4,13 +4,15 @@
         <Header />
 
         <!-- home section start -->
-        <section class="home" id="home">
-            <div class="max-width">
-                <div class="home-content special">
-                    <div class="text-2">Situations professionnelles</div>
+        <transition name="apparition">
+            <section class="home" id="home">
+                <div class="max-width">
+                    <div class="home-content special">
+                        <div class="text-2">Situations professionnelles</div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </transition>
 
         <!-- services section start -->
         <section class="services" id="services">
@@ -74,7 +76,7 @@ export default {
                 {
                     name: 'Gestion des tâches AP3',
                     description: 'Utilisation de l\'outil GANTT PROJECT pour la répartition des tâches, le suivi et l\'analyse du projet de l\'application web.',
-                    document: 'gant_m2l_ap3.pdf'
+                    document: '/ap2/gantt_site.pdf'
                 },
                 {
                     name: 'Travail en mode projet',
@@ -84,7 +86,7 @@ export default {
                 {
                     name: 'Gestion des tâches AP4',
                     description: 'Utilisation de l\'outil GANTT PROJECT pour la répartition des tâches, le suivi et l\'analyse du projet de l\'application mobile.',
-                    document: 'gant_m2l_ap4.pdf'
+                    document: '/ap2/gantt_application.pdf'
                 },
                 {
                     name: 'Tests d\'intégration de services',
@@ -125,6 +127,16 @@ export default {
                     name: 'Développement du projet professionnel',
                     description: 'Perspectives d\'évolution après le BTS notamment dans les formations de Data Scientist',
                     document: 'projet_pro.pdf'
+                },
+                {
+                    name: 'Documentation Vue JS',
+                    description: 'La réalisation d\'une documentation sur l\'utilisation de Vue.js était une de mes tâches de stage',
+                    document: 'doc_vuejs.pdf'
+                },
+                {
+                    name: 'Documentation Git',
+                    description: 'La réalisation d\'une documentation sur l\'utilisation de GIT était une de mes tâches de stage',
+                    document: 'doc_git.pdf'
                 }
             ]
         }

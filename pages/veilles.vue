@@ -81,19 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.affiche-enter{
-  transform: translateY(500px);
-}
-.affiche-enter-active {
-  transition: transform 1s cubic-bezier(1.0, 0.5, 0.8, 1.0), color .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.affiche-leave-active {
-  transition: opacity .2s;
-}
-.affiche-leave-to{
-  opacity: 0;
-}
-.fade-enter{
+/* .fade-enter{
   transform: translateY(500px);
 }
 .fade-enter-active {
@@ -104,5 +92,19 @@ export default {
 }
 .fade-leave-to{
   opacity: 0;
+} */
+.fade-enter{
+    transform: translateX(-1500px);
+}
+.fade-enter-active {
+    transition: transform 2s;
+}
+
+.fade-leave-active {
+    transition: all 1s;
+}
+.fade-leave-to{
+    opacity: 0;
+    transform: translateX(1500px);
 }
 </style>
