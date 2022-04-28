@@ -198,7 +198,7 @@ export default {
                     details: [
                         {
                             name: 'Attestation de stage',
-                            lien: '#'
+                            lien: '/attestation_de_stage_2021.pdf'
                         },
                         {
                             name: 'Rapport de stage',
