@@ -165,7 +165,7 @@ export default {
                     details: [
                         {
                             name: 'Documentation',
-                            lien: '/ap3/documentation'
+                            lien: '/ap3/documentation.pdf'
                         },
                         {
                             name: 'Présentation',
