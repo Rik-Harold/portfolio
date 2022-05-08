@@ -16,7 +16,7 @@
         <!-- services section start -->
         <section class="services" id="services">
             <div class="max-width">
-                <h2 class="title title-projets" id="ap">Ateliers Professionnels</h2>
+                <h2 class="title title-projets" id="ap">Ateliers de Professionnalisation</h2>
                 <div class="serv-content">
                     <div v-for="(projet, index) in ap" :key="index" class="card" @mouseleave="projet.openDetail = false">
                         <div class="box">
@@ -164,12 +164,12 @@ export default {
                     openDetail: false,
                     details: [
                         {
-                            name: 'Documentation',
-                            lien: '/ap3/documentation.pdf'
+                            name: 'Présentation',
+                            lien: '/ap3/presentation.pdf'
                         },
                         {
-                            name: 'Présentation',
-                            lien: '#'
+                            name: 'Documentation',
+                            lien: '/ap3/documentation.pdf'
                         }
                     ],
                     lien: '/ap3/presentation.pdf'
@@ -178,16 +178,16 @@ export default {
                     titre: 'Développement d\'une application mobile de réservation de salles ouverte au public et en lien avec le site web de la M2L à travers une API REST.',
                     openDetail: false,
                     details: [
-                        {
+                        /*{
                             name: 'Documentation',
                             lien: '#'
-                        },
+                        },*/
                         {
                             name: 'Présentation',
-                            lien: '#'
+                            lien: '/ap4/presentation.pdf'
                         }
                     ],
-                    lien: '#'
+                    lien: '/ap4/presentation.pdf'
                 }
             ],
             stages: [
@@ -202,7 +202,7 @@ export default {
                         },
                         {
                             name: 'Rapport de stage',
-                            lien: '#'
+                            lien: '/rapport_stage_1.pdf'
                         }
                     ]
                 },
@@ -213,11 +213,11 @@ export default {
                     details: [
                         {
                             name: 'Attestation de stage',
-                            lien: '#'
+                            lien: '/attestation_de_stage_2022.pdf'
                         },
                         {
                             name: 'Rapport de stage',
-                            lien: '#'
+                            lien: '/rapport_stage_2.pdf'
                         }
                     ]
                 }

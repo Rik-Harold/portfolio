@@ -20,6 +20,9 @@
                         </p>
                     </div>
                 </div>
+                <div id="voirVeille">
+                    <a class="viewDetails" target="_blank" href="veille_informationnelle.pdf">Outils de veille juridique</a>
+                </div>
             </div>
         </section>
 
@@ -55,14 +58,15 @@
                 <div class="skills-content">
                     <div class="column left">
                         <div class="text">Actualité 1</div>
-                        <p>Loi du 3 mars 2022 pour la mise en place d'une certification de cybersécurité des plateformes numériques destinée au grand public.</p>
-                        <p>La loi crée un "cyberscore" afin que les internautes puissent connaître la sécurisation de leurs données...</p>
-                        <a class="lien" href="https://www.vie-publique.fr/loi/282626-loi-cyberscore-securite-des-plateformes-numeriques" target="_blank">Lire plus</a>
+                        <p class="actuVeille">Identité numérique : à quoi va servir l'application lancée en mai par le gouvernement ?</p>
+                        <p>Une nouvelle application reposant sur l'identité numérique va permettre de confirmer son identité en ligne pour s'authentifier lors de démarches administratives.<br />
+                        Le gouvernement lancera prochainement une application "France Identité" permettant de prouver son identité en ligne. L'outil sera déployé fin mai dans une version test...</p>
+                        <a class="lien" href="https://www.rtl.fr/actu/sciences-tech/identite-numerique-a-quoi-va-servir-l-application-lancee-en-mai-par-le-gouvernement-7900149727" target="_blank">Lire plus</a>
                     </div>
                     <div class="column right2">
                         <div class="text">Actualité 2</div>
-                        <p>La CNIL publie un guide du RGPB pour les développeurs</p>
-                        <p>Afin d’accompagner les acteurs du développement web ou applicatif dans la mise en conformité de leurs travaux, la CNIL a élaboré un nouveau guide de bonnes pratiques sous licence libre, qui a vocation à être enrichi par les professionnels...</p>
+                        <p class="actuVeille">Cookies : la CNIL sanctionne GOOGLE à hauteur de 150 millions d’euros</p>
+                        <p>Le 31 décembre 2021, la CNIL a sanctionné GOOGLE pour un montant total de 150 millions d’euros (90 millions d’euros pour GOOGLE LLC et 60 millions d’euros pour GOOGLE IRELAND LIMITED) parce quil n’est pas permis aux utilisateurs de google.fr et de youtube.com de refuser les cookies aussi facilement que de les accepter.</p>
                         <a class="lien" href="https://www.cnil.fr/fr/la-cnil-publie-un-guide-rgpd-pour-les-developpeurs" target="_blank">Lire plus</a>
                     </div>
                 </div>
@@ -77,6 +81,16 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+#voirVeille
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actuVeille
+{
+    color: brown;
+    font-size: 1.2rem;
+}
 </style>

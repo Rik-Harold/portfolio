@@ -148,7 +148,7 @@
                     <div v-for="(projet, index) in projets" :key="index" class="card">
                         <div class="box">
                             <div class="text">{{ projet.name }}</div>
-                            <p>Ceci est un projet</p>
+                            <p>{{ projet.description }}</p>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                     <div class="column left">
                         <div class="text">Réseaux sociaux professionnels</div>
                         <p>Je suis également actif sur les réseaux sociaux comme <a href="https://github.com/Rik-Harold" target="_blank" rel="noopener noreferrer">GitHub</a> 
-                        et <a href="www.linkedin.com/in/cédrik-dodde-b0178a19a" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+                        et <a href="https://www.linkedin.com/in/cédrik-dodde-b0178a19a" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
                         <div class="icons">
                             <div class="row">
                                 <i class="fas fa-user"></i>
@@ -213,7 +213,6 @@
                 </div>
             </div>
         </section>
-        <!-- <img src="~/assets/images/bts-sio.png" alt="Blocs de compétences BTS SIO"> -->
         
         <!-- Pied de page -->
         <Footer />
@@ -239,16 +238,16 @@ export default {
             message: '',
             projets: [
                 {
-                    name: 'Premier projet',
-                    image: '~/assets/images/projet-bot-whatsapp.png'
+                    name: 'Site d\'accueil d\'un réseau social',
+                    description: 'Une interface de réseau social sous Vue.js et PHP'
                 },
                 {
-                    name: 'Second projet',
-                    image: '~/assets/images/projet-bot-whatsapp.png'
+                    name: 'Site de messagerie instantanée',
+                    description: 'Un système de messagerie développé entièrement sous PHP'
                 },
                 {
-                    name: 'Dernier projet',
-                    image: '~/assets/images/projet-bot-whatsapp.png'
+                    name: 'Site de gestion d\'un garage',
+                    description: 'La gestion d\'une entreprise virtuelle d\'achat de voirture dans un garage'
                 }
             ],
             transporter: null

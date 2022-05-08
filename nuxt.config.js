@@ -27,7 +27,6 @@ export default {
 
   transition: {
     name: 'affiche',
-    mode: 'ease-in-out'
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
