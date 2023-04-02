@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Découvrir le portfolio de compétences de Cédrik DODDE, étudiant en BTS SIO SLAM.' },
+      { hid: 'description', name: 'description', content: 'Découvrez le portfolio de compétences de Cédrik DODDE, étudiant en BTS SIO SLAM session juin 2022' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -45,26 +45,25 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    ['nuxt-mail', {
-      message: {
-        to: 'cdrikdodde@yahoo.com',
-      },
-      smtp: {
-        host: 'smtp.mail.yahoo.com',
-        port: 465,
-        secure: true,
-        auth: {
-          user: 'cdrikdodde@yahoo.com',
-          pass: 'Amaterazu3'
-        },
-        tls: {
-          rejectUnauthorized: false
-        }
-      },
-    }],
+    'nuxt-protected-mailto',
   ],
+
+  mail: {
+    message: {
+      to: 'jharold613@gmail.com',
+    },
+    smtp: {
+      host: "smtp.example.com",
+      port: 587,
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    html: {
+      minify: {
+        decodeEntities: false
+      }
+    }
   }
 }

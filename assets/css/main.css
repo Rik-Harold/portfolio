@@ -244,7 +244,7 @@ section .titleVeille::after{
     color: crimson;
     font-weight: 500;
 }
-.home .home-content a{
+.home .home-content a {
     display: inline-block;
     background: crimson;
     color: #fff;
@@ -256,8 +256,18 @@ section .titleVeille::after{
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
-.home .home-content a:hover{
+.home .home-content a.cv {
+    background: #eee;
     color: crimson;
+    margin-right: 10px;
+    border: 2px solid #fff;
+}
+.home .home-content a:hover {
+    color: crimson;
+    background: none;
+}
+.home .home-content a.cv:hover{
+    color: #fff;
     background: none;
 }
 
@@ -426,6 +436,7 @@ a {
     color: crimson;
     background: #fff;
 }
+/* Fond des cards de présentation des réalisations */
 .services .serv-content .card:hover{
     background: crimson;
 }

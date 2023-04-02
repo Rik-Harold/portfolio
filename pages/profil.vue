@@ -195,9 +195,9 @@
                                 <div class="field name">
                                     <input type="text" v-model="identite" placeholder="Nom et Prénom" required>
                                 </div>
-                                <div class="field email">
+                                <!-- <div class="field email">
                                     <input type="email" v-model="expediteur" placeholder="Email" required>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="field">
                                 <input type="text" v-model="sujet" placeholder="Sujet" required>
@@ -205,8 +205,14 @@
                             <div class="field textarea">
                                 <textarea cols="30" rows="10" v-model="message" placeholder="Message.." required></textarea>
                             </div>
+                            <!-- Zone du bouton d'envoi de mail -->
                             <div class="button-area">
-                                <button>Envoyer</button>
+                                <!-- Envoi du mail -->
+                                <Mailto :mail="destinataire" :subject="sujet" :body="message + '\n\n' + identite" title="Envoyer">
+                                    <button type="button" @click="send(instance)" id="mailButton">
+                                        Envoyer
+                                    </button>
+                                </Mailto>
                             </div>
                         </form>
                     </div>
@@ -222,10 +228,10 @@
 <script>
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
-// import nodemailer from 'nodemailer'
+// import { SMTPClient } from 'emailjs'
+// import sendMail from "../services/mail.js"
 
 export default {
-    layout: 'model',
     components: {
         Header,
         Footer
@@ -233,7 +239,7 @@ export default {
     data() {
         return {
             identite: '',
-            expediteur: '',
+            destinataire: 'cdrikdodde@yahoo.com',
             sujet: '',
             message: '',
             projets: [
@@ -250,51 +256,25 @@ export default {
                     description: 'La gestion d\'une entreprise virtuelle d\'achat de voirture dans un garage'
                 }
             ],
-            transporter: null
+            instance: null,
         }
     },
     mounted() {
-        // Initialisation du transporteur de mail
-        // this.transporter = nodemailer.createTransport({
-        //     service: 'yahoo',
-        //     auth: {
-        //         user: 'cdrikdodde@yahoo.com',
-        //         pass: 'Amaterazu3'
-        //     }
-        // })
+        // Initialisation de l'instance de vue
+        this.instance = this
     },
     methods: {
         send: (instance) => {
-            // Vérification
-            // if (instance != null)
-            // {
-            //     window.open('mailto:' + instance.expediteur + '?subject=' + instance.sujet + '&body=' + instance.message + '\n\n' + instance.identite + '')
-            //     // Envoi du mail
-            //     // instance.$mail.send({
-            //     //     from: instance.expediteur,
-            //     //     subject: instance.sujet,
-            //     //     text: instance.message + '\n\n' + instance.identite,
-            //     // })
-            //     // Notification de réception
-            //     alert('Votre message a bien été envoyé !')
-            // }
-            let mailOptions = {
-                from: instance.expediteur,
-                to: 'jharold613@gmail.com',
-                subject: instance.sujet,
-                text: instance.message
-            }
-
-            instance.transporter.sendMail(mailOptions, function(error, info){
-                if (error) {
-                    console.log(error)
-                } else {
-                    console.log('Email sent: ' + info.response)
-                }
-            })
+            // Notification de mail envoyé
+            alert('Vous serez redirigé vers votre boite mail pour confirmer l\'envoi du mail !')
+            // Initialisation
+            setTimeout(() => {
+                instance.identite = ''
+                instance.sujet = ''
+                instance.message = ''
+            }, 1500)
         }
     }
-
 }
 </script>
 

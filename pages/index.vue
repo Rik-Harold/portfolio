@@ -2,94 +2,136 @@
   <!-- <Tutorial/> -->
   <div  id="index">
     <!-- Nav barre -->
-    <Header />
+    <Entete />
 
-    <!-- home section start
-    <transition name="entete">
-        
-    </transition> -->
     <section class="home" id="home">
         <div class="max-width">
             <transition name="entete">
                 <div class="home-content">
                     <div class="text-1">Bonjour, je m'appelle</div>
                     <div class="text-2">Cédrik Doddé</div>
-                    <div class="text-3">Et je suis <span class="typing">Développeur web et mobile</span></div>
-                    <a class="lien" href="profil">Voir mon profil</a>
+                    <div class="text-3">Et je suis <span class="typing"></span></div>
+                    <a class="cv" href="CV_Cedrik_DODDE_Dev_Designer.pdf" target="_blank">CV</a>
+                    <a class="lien" href="realisations">Réalisations</a>
                 </div>
             </transition>
         </div>
     </section>
 
     <!-- about section start -->
-    <section class="about main-top" id="about">
-        <div class="max-width">
-            <h2 class="title title-home" id="bts-sio">BTS SIO</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="~/assets/images/bts.png" alt="bts sio">
-                </div>
-                <div class="column right">
-                    <div class="text">Qu'est-ce que le BTS SIO ?</div>
-                    <p>Le Brevet de Technicien Supérieur Services Informatiques aux Organisations (SIO) est un diplôme reconnu par l’état de
-                        niveau Bac+2. Il s’adresse à ceux qui souhaitent se former en deux ans aux métiers d’administrateur réseau ou de développeur
-                        pour intégrer directement le marché du travail ou continuer des études dans le domaine de l’informatique.</p>
-                    <p id="cybersecurite" >Le nouveau BTS SIO forme à la <b>cybersécurité</b> dès la rentrée 2020 ! Organisé par les professionnels 
-                        du secteur informatique, les changements ne sont pas anodins puisqu’ils sont désormais organisés en bloc de compétences, afin 
-                        de mieux répondre aux besoins des entreprises.</p>
-                    <p>La cybersécurité est désormais essentielle dans la stratégie d’une entreprise et elle vise tous les secteurs d’activités 
-                        qu’ils soient industriels ou encore financiers.</p>
-                    <p>Le BTS SIO propose deux (02) spécialités bien distinctes : l'option <b>SISR</b> et l'option <b>SLAM</b>.</p>
+    <section class="about" id="about">
+            <div class="max-width">
+                <h2 class="title" id="moi">A propos de moi</h2>
+                <div class="about-content">
+                    <div class="column left">
+                        <img src="~/assets/images/profil.webp" alt="moi">
+                    </div>
+                    <div class="column right">
+                        <div class="text">Je suis Cédrik DODDE</div>
+                        <p>J'ai 22ans et je suis développeur web et UI/UX Designer. Ma passion pour l'informatique m'a poussé à obtenir un BTS SIO en Solution logiciel et applications métiers avant de compléter ma formation d'un Titre RNCP (Bac +2) en Infographie et Design Web à <i>DORANCO</i>. Je me sers ainsi de mes compétences mixtes danc ces deux domaines pour créer, protoyper et développer des interfaces web, des projets print et de l'animation 2D et 3D.</p>
+                        <div class="text">Mes perspectives d'avenir</div>
+                        <p>Polyvalent dans mes compétences, je suis disponible à travailler sur plusieurs projets en tant que Freelance. Toutefois, une bonne opportunité en entreprise est également une perspective que j'aimerai explorer.</p>
+                        <a class="lien" href="CV_Cedrik_DODDE_Dev_Designer.pdf" target="_blank">Télécharger mon CV</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+    <!-- contact section start -->
+    <!-- services section start -->
+    <section class="services" id="services">
+            <div class="max-width">
+                <h2 class="title" id="formations" >Mes formations</h2>
+                <div class="serv-content">
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="text">Baccalauréat</div>
+                            <p>J'ai orienté mes études secondaires du second cycle en sciences et maths pour obtenir un Baccalauréat scientifique.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-code"></i>
+                            <div class="text">BTS</div>
+                            <p>Diplômé d'un baccalauréat scientifique, je me suis spécialisé en informatique à travers un cursus de BTS SIO.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="text">Infographie</div>
+                            <p>Une spécialisation en infographie m'a permis d'améliorer mes compétences en développement d'interfaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- contact section start -->
-    <div class="contact main-bottom" id="contact">
-        <div class="max-width">
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Option SISR</div>
-                    <p>L’acronyme SISR signifie « Solutions d’infrastructure, systèmes et réseaux ». Voici quelques indications sur
-                    cette première option du BTS SIO, ainsi des précisions sur cette formation et ses débouchés.</p>
-                    <p>Dans cette option, le titulaire du diplôme participe à la production et à la fourniture de services en réalisant
-                    ou en adaptant des solutions d’infrastructure et en assurant le fonctionnement optimal des équipements et des
-                    services informatiques.</p>
-                    <p>Les débouchés d'un BTS SIO SISR sont entre autres :</p>
-                    <ul class="list-metiers">
-                        <li>administrateur systèmes et réseaux</li>
-                        <li>administrateur sécurité</li>
-                        <li>technicien d’infrastructure</li>
-                        <li>technicien de maintenance</li>
-                        <li>technicien réseaux – télécoms</li>
-                        <li>technicien développement – exploitation</li>
-                        <li>technicien support et déploiement</li>
-                        <li>technicien systèmes et réseaux</li>
-                    </ul>
-                </div>
-                <div class="column right">
-                    <div class="text">Option SLAM</div>
-                    <p>L’acronyme SLAM signifie «Solutions Logicielles et Applications Métier». Voici quelques indications sur
-                    cette seconde option du BTS SIO, ainsi des précisions sur cette formation et ses débouchés.</p>
-                    <p>Dans cette option, le titulaire du diplôme participe à la production et à la fourniture de services en
-                    développant, en adaptant ou en maintenant des solutions applicatives.</p>
-                    <br />
-                    <p>Les débouchés d'un BTS SIO SLAM sont entre autres :</p>
-                    <ul class="list-metiers">
-                        <li>analyste d'applications</li>
-                        <li>analyste programmeur</li>
-                        <li>chargé d'études informatiques</li>
-                        <li>développeur d'applications informatiques</li>
-                        <li>développeur d’applications mobiles</li>
-                        <li>technicien développement – exploitation</li>
-                        <li>développeur Web</li>
-                        <li>responsable des services applicatifs</li>
-                    </ul>
+    <section class="contact" id="contact">
+            <div class="max-width">
+                <h2 class="title" id="contactez-moi">Contactez-moi</h2>
+                <div class="contact-content">
+                    <div class="column left">
+                        <div class="text">Réseaux sociaux professionnels</div>
+                        <p>Je suis également actif sur les réseaux sociaux comme <a href="https://github.com/Rik-Harold" target="_blank" rel="noopener noreferrer">GitHub</a> 
+                        et <a href="https://www.linkedin.com/in/cédrik-dodde-b0178a19a" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fas fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Nom et Prénom</div>
+                                    <div class="sub-title">DODDE Cédrik</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <div class="head">Addresse</div>
+                                    <div class="sub-title">10 Avenue Marc sangnier, Viry-Châtillon</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">cdrikdodde@yahoo.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column right">
+                        <div class="text">Ecrivez-moi</div>
+                        <form action="#">
+                            <div class="fields">
+                                <div class="field name">
+                                    <input type="text" v-model="identite" placeholder="Nom et Prénom" required>
+                                </div>
+                                <!-- <div class="field email">
+                                    <input type="email" v-model="expediteur" placeholder="Email" required>
+                                </div> -->
+                            </div>
+                            <div class="field">
+                                <input type="text" v-model="sujet" placeholder="Sujet" required>
+                            </div>
+                            <div class="field textarea">
+                                <textarea cols="30" rows="10" v-model="message" placeholder="Message.." required></textarea>
+                            </div>
+                            <!-- Zone du bouton d'envoi de mail -->
+                            <div class="button-area">
+                                <!-- Envoi du mail -->
+                                <Mailto :mail="destinataire" :subject="sujet" :body="message + '\n\n' + identite" title="Envoyer">
+                                    <button type="button" @click="send(instance)" id="mailButton">
+                                        Envoyer
+                                    </button>
+                                </Mailto>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+    </section>
     
     <!-- Pied de page -->
     <Footer />
@@ -97,7 +139,10 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
+// Importation des dépendances
+import Typed from 'typed.js'
+// import Header from '../components/Header.vue'
+import Entete from '../components/Entete.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
@@ -105,8 +150,27 @@ export default {
   // transition: 'page',
   name: 'Index',
   components: {
-    Header,
+    Entete,
     Footer
+  },
+  data () {
+    return {
+        animeBienvenu: null
+    }
+  },
+  mounted () {
+    // Création de l'animation
+    const typed1 = new Typed('.typing', {
+      strings: ['UI/UX Designer', 'Développeur web', 'Développeur mobile'],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true,
+      fadeOut: true,
+      fadeOutClass: 'typed-fade-out',
+      fadeOutDelay: 500
+    })
+    // Affectation de l'animation de bienvenu
+    this.animeBienvenu = typed1
   }
 }
 </script>

@@ -11,7 +11,7 @@
                 <div class="logo"><nuxt-link to="/">Portfo<span id="partie" >lio.</span></nuxt-link></div>
                 <!-- Liens de navigation -->
                 <ul :class="{ 'active': clique }" class="menu">
-                    <li><nuxt-link to="/" class="menu-btn">Accueil</nuxt-link></li>
+                    <li><nuxt-link to="accueil" class="menu-btn">Accueil</nuxt-link></li>
                     <li><nuxt-link to="profil" class="menu-btn">Profil</nuxt-link></li>
                     <li><nuxt-link to="documentation" class="menu-btn">Documentation</nuxt-link></li>
                     <li><nuxt-link to="preuves" class="menu-btn">Preuves techniques</nuxt-link></li>

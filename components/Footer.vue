@@ -2,7 +2,7 @@
     <div>
         <!-- PIED DE PAGE du site -->
         <footer>
-            <span>Cédrik DODDE ~ <span class="far fa-copyright"></span> 2022 Tous droits réservés.</span>
+            <span>Cédrik DODDE ~ <span class="far fa-copyright"></span> 2023 Tous droits réservés.</span>
         </footer>
     </div>
 </template>
