@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/veilles", {data:[{}],fetch:{},mutations:void 0});
