@@ -35,24 +35,25 @@
                             <div class="details">
                                 <img :src="realisation.image" :alt="realisation.name">
                             </div>
-                            <button v-if="realisation.isImage" class="viewDoc" @click="ouvreImage(instance, realisation.source)">Affiche</button>
+                            <!-- <button v-if="realisation.isImage" class="viewDoc" @click="ouvreImage(instance, realisation.source)">Affiche</button>
                             <button v-else-if="realisation.isVideo" class="viewDoc" @click="ouvreVideo(instance, realisation.source)">Affiche</button>
-                            <a v-else class="viewDoc" :href="realisation.source" target="_blank">Voir plus</a>
+                            <a v-else class="viewDoc" :href="realisation.source" target="_blank">Voir plus</a> -->
+                            <a class="viewDoc" :href="realisation.source" target="_blank">Détails</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Affichage plein écran de l'image' -->
-                <div v-show="afficheImage" @click="fermeImage(instance)" class="affiche-image">
+                <!-- <div v-show="afficheImage" @click="fermeImage(instance)" class="affiche-image">
                     <img :src="sourceImage" alt="">
-                </div>
+                </div> -->
 
                 <!-- Affichage plein écran de la vidéo -->
-                <div v-show="afficheVideo" @click="fermeVideo(instance)" class="affiche-video">
+                <!-- <div v-show="afficheVideo" @click="fermeVideo(instance)" class="affiche-video">
                     <video :src="sourceVideo" height="300" controls>
                         Vidéo indisponible
                     </video>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -144,11 +145,18 @@ export default {
                     source: '/realisations/dauphin.png'
                 },
                 {
-                    name: 'Illustration festival',
+                    name: 'Glassmorphisme',
                     image: '/realisations/glassmorphisme.png',
                     isVideo: false,
                     isImage: true,
                     source: '/realisations/glassmorphisme.png'
+                },
+                {
+                    name: 'Illustration festival',
+                    image: '/realisations/festival.png',
+                    isVideo: false,
+                    isImage: true,
+                    source: '/realisations/festival.png'
                 },
                 {
                     name: 'Maison 3D',
@@ -234,8 +242,8 @@ export default {
     },
     mounted () {
         this.instance = this
-    },
-    methods: {
+    }
+    /* methods: {
         ouvreImage: (instance, data) => {
             instance.afficheImage = true
             instance.sourceImage = data
@@ -252,7 +260,7 @@ export default {
             instance.afficheVideo = false
             instance.sourceVideo = ''
         }
-    }
+    } */
 }
 </script>
 

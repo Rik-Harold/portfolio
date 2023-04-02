@@ -69,7 +69,7 @@
     </section>
 
     <!-- contact section start -->
-    <section class="contact" id="contact">
+    <section class="contact">
             <div class="max-width">
                 <h2 class="title" id="contactez-moi">Contactez-moi</h2>
                 <div class="contact-content">
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column right">
+                    <div class="column right" id="contact">
                         <div class="text">Ecrivez-moi</div>
                         <form action="#">
                             <div class="fields">
@@ -155,10 +155,17 @@ export default {
   },
   data () {
     return {
-        animeBienvenu: null
+      animeBienvenu: null,
+      identite: '',
+      destinataire: 'cdrikdodde@yahoo.com',
+      sujet: '',
+      message: '',
+      instance: null
     }
   },
   mounted () {
+    // Initialisation de l'instance de vue
+    this.instance = this
     // Création de l'animation
     const typed1 = new Typed('.typing', {
       strings: ['UI/UX Designer', 'Développeur web', 'Développeur mobile'],
@@ -171,6 +178,18 @@ export default {
     })
     // Affectation de l'animation de bienvenu
     this.animeBienvenu = typed1
+  },
+  methods: {
+    send: (instance) => {
+      // Notification de mail envoyé
+      alert('Vous serez redirigé vers votre boite mail pour confirmer l\'envoi du mail !')
+      // Initialisation
+      setTimeout(() => {
+        instance.identite = ''
+        instance.sujet = ''
+        instance.message = ''
+      }, 1500)
+    }
   }
 }
 </script>
