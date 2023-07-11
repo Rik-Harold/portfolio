@@ -3,6 +3,7 @@
   <div  id="index">
     <!-- Nav barre -->
     <Entete />
+    <!-- <Header /> -->
 
     <section class="home" id="home">
         <div class="max-width">
@@ -11,7 +12,8 @@
                     <div class="text-1">Bonjour, je m'appelle</div>
                     <div class="text-2">Cédrik Doddé</div>
                     <div class="text-3">Et je suis <span class="typing"></span></div>
-                    <a class="cv" href="CV_Cedrik_DODDE_Dev_Designer.pdf" target="_blank">CV</a>
+                    <!-- <a class="cv" href="CV_Cedrik_DODDE_Dev_Designer.pdf" target="_blank">CV</a> -->
+                    <a class="cv" href="CV_Developper_Cedrik_DODDE.pdf" target="_blank">CV</a>
                     <a class="lien" href="realisations">Réalisations</a>
                 </div>
             </transition>
@@ -30,7 +32,8 @@
                         <div class="text">Je suis Cédrik DODDE</div>
                         <p>J'ai 22ans et je suis développeur web et UI/UX Designer. Ma passion pour l'informatique m'a poussé à obtenir un BTS SIO en Solution logiciel et applications métiers avant de compléter ma formation d'un Titre RNCP (Bac +2) en Infographie et Design Web à <i>DORANCO</i>. Je me sers ainsi de mes compétences mixtes danc ces deux domaines pour créer, protoyper et développer des interfaces web, des projets print et de l'animation 2D et 3D.</p>
                         <div class="text">Mes perspectives d'avenir</div>
-                        <p>Polyvalent dans mes compétences, je suis disponible à travailler sur plusieurs projets en tant que Freelance. Toutefois, une bonne opportunité en entreprise est également une perspective que j'aimerai explorer.</p>
+                        <!-- <p>Polyvalent dans mes compétences, je suis disponible à travailler . Toutefois, une bonne opportunité en entreprise est également une perspective que j'aimerai explorer.</p> -->
+                        <p>Polyvalent dans mes compétences, je suis disponible à travailler en entreprise pour de long ou cours contrat ou encore avec des missions de Freelance.</p>
                         <a class="lien" href="CV_Cedrik_DODDE_Dev_Designer.pdf" target="_blank">Télécharger mon CV</a>
                     </div>
                 </div>
@@ -151,6 +154,7 @@ export default {
   name: 'Index',
   components: {
     Entete,
+    // Header,
     Footer
   },
   data () {

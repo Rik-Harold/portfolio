@@ -1,7 +1,8 @@
 <template>
     <div>
         <!-- Nav barre -->
-        <Header />
+        <!-- <Header /> -->
+        <Entete />
 
         <!-- home section start -->
         <transition name="apparition">
@@ -45,13 +46,15 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
+// import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import Entete from '../components/Entete.vue'
 
 export default {
     // layout: 'model',
     components: {
-        Header,
+        // Header,
+        Entete,
         Footer
     },
     data() {

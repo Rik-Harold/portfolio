@@ -12,9 +12,16 @@
                 <!-- Liens de navigation -->
                 <ul :class="{ 'active': clique }" class="menu">
                     <li><nuxt-link to="/" class="menu-btn">Profil</nuxt-link></li>
+                    <li><nuxt-link to="/preuves" class="menu-btn">Projets</nuxt-link></li>
                     <li><nuxt-link to="/realisations" class="menu-btn">Réalisations</nuxt-link></li>
                     <!-- <li><nuxt-link to="/" class="menu-btn">Preuves techniques</nuxt-link></li> -->
                     <li><nuxt-link to="/#contact" class="menu-btn">Contact</nuxt-link></li>
+                    <!-- Liens dynamiques -->
+                    <!-- <li>
+                        <nuxt-link v-for="(index, menu) in liens" :key="index" :to="menu.lien" class="menu-btn">
+                            {{ menu.name }}
+                        </nuxt-link>
+                    </li> -->
                 </ul>
                 <!-- Bouton d'ouverture du menu responsive -->
                 <div class="menu-btn">
@@ -31,7 +38,25 @@
         data() {
             return {
                 fond: 'navbarre-scroll',
-                clique: false
+                clique: false,
+                liens: [
+                    {
+                        name: 'Profil',
+                        lien: '/'
+                    },
+                    {
+                        name: 'Projets',
+                        lien: '/preuves'
+                    },
+                    {
+                        name: 'Réalisations',
+                        lien: '/realisations'
+                    },
+                    {
+                        name: 'Contac',
+                        lien: '/#contact'
+                    }
+                ]
             }
         },
         mounted() {
